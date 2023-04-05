@@ -1,0 +1,244 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+/* font-family: 'Itim', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+    /* background: url("../images/bg-image.jpg") no-repeat; */
+    /* width: 100vw; */
+
+}
+
+/* Hide the scrollbar on the left side of an element */
+::-webkit-scrollbar {
+    width: 10px;
+    /* background-color: transparent; */
+}
+
+
+.content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+}
+
+.content .logo {
+    height: 50;
+}
+
+.mynavbar {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 10px 0px;
+    background: #1b1b1b;
+    color: #fff;
+}
+
+.mynavbar.sticky {
+    padding: 10px 0px;
+    background: #1b1b1b;
+    transition: all 0.3 ease;
+}
+
+.mynavbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mynavbar .menu-list {
+    display: inline-flex;
+}
+
+.mynavbar .logo img {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.menu-list li {
+    color: aliceblue;
+    padding: 10px;
+    list-style: none;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: 500;
+    transition: all 0.3 ease;
+    font-family: "Merriweather", serif;
+
+}
+
+.menu-list li a:hover {
+    color: aqua;
+}
+
+.banner {
+    height: 80vh;
+    background: url("../image/banner.jpg") no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner .banner-text {
+    padding: 9rem;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    color: aqua;
+}
+
+/* .about{
+padding: 30px 0;
+}
+
+.about .title{
+font-size: 5rem;
+font-weight: 4rem;
+
+}
+
+.about p{
+padding: 30px 0px;
+} */
+
+
+.icon {
+    color: aliceblue;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+
+/* Not working don't know why? Below code */
+.icon .cancel-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+
+/* @media (max-width: 1230px) {
+.content{
+padding: 0 60px;
+}
+}
+@media (max-width: 1100px) {
+.content{
+padding: 0 40px;
+}
+}
+@media (max-width: 900px) {
+.content{
+padding: 0 30px;
+}
+} */
+
+
+@media (max-width: 868px) {
+
+    .mynavbar .logo {
+        padding: 0px 0px;
+    }
+
+    .mynavbar .menu-list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 50vw;
+        /* background-color: transparent; */
+        /* background: rebeccapurple; */
+        background: url("../images/choosing-bg.jpg") no-repeat;
+        max-width: 400px;
+        display: block;
+        padding: 40px 10px;
+        margin-top: 4.4rem;
+        transition: all 0.3 ease;
+    }
+
+    .mynavbar .menu-list.active {
+        left: 0%;
+    }
+
+
+    .mynavbar .menu-list li {
+        /* padding: 20px; */
+        margin-top: 35px;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+}
+
+
+@media (max-width:415px) {
+
+    .banner {
+        height: 50vh;
+
+    }
+
+}
+
+
+/* @media (max-width: 380px) {
+.navbar .logo a{
+font-size: 27px;
+}
+} */
+
+
+
+
+/****************************/
+/*         Footer           */
+/****************************/
+
+
+
+.footSection {
+    color: #f0f9ff;
+    background-color: #282d32;
+    width: 100vw;
+    text-decoration: none;
+}
+
+.footsection a {
+    text-decoration: none;
+}
+
+.lastfoosec {
+    width: 100vw;
+    height: 6rem;
+    background-color: black;
+    color: #f0f9ff;
+}
+
+.footersectionicon i {
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+
+

@@ -1,0 +1,127 @@
+
+        * {
+            background-color: black;
+        }
+
+        .clzbanner img {
+            width: 100vw;
+        }
+
+        .loginSecction {
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 28%;
+            left: 34%;
+        }
+
+        .loginSecction .loginSecctionContent {
+            position: absolute;
+            top: 80%;
+        }
+
+        .loginSecction .btn-solid-reg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+
+
+        .scfName {
+            color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sclName {
+            color: #fff;
+            font-family: cursive;
+        }
+
+        .btn-solid-reg {
+            display: inline-block;
+            padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
+            border: 0.125rem solid #00bfd8;
+            background-color: #00bfd8;
+            color: #fff;
+            font: 700 0.75rem/0 "Raleway", sans-serif;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-solid-reg:hover {
+            background-color: transparent;
+            color: #00bfd8;
+            text-decoration: none;
+        }
+
+        .lost-solid-reg {
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        @media (max-width:840px) {
+
+            .clzbanner img {
+                width: 100vw;
+
+            }
+
+            .loginSecction {
+                height: 300px;
+                width: 300px;
+                position: absolute;
+                top: 14%;
+                left: 31%;
+            }
+
+            .loginSecction .loginSecctionContent {
+                position: absolute;
+                top: 80%;
+            }
+        }
+
+        @media (mix-width:600px) {
+            .clzbanner img {
+                width: 100vw;
+
+            }
+
+            .loginSecction {
+                height: 200px;
+                width: 200px;
+                position: absolute;
+                top: 14%;
+                left: 0%;
+            }
+
+            .loginSecction .loginSecctionContent {
+                position: absolute;
+                top: 50%;
+            }
+
+        }
+
+
+        @media (max-width:415px) {
+
+            .clzbanner img {
+                width: 100vw;
+
+            }
+
+            .loginSecction {
+                height: 250px;
+                width: 250px;
+                position: absolute;
+                top: 14%;
+                left: 18%;
+            }
+
+            .loginSecction .loginSecctionContent {
+                position: absolute;
+                top: 80%;
+            }
+        }
+   
