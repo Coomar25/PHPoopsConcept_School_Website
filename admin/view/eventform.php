@@ -1,5 +1,9 @@
 <?php
 include 'header.php';
+include 'model/dbmodule.php';
+$obj = new Database();
+$obj->select("notice", "*", null, null, null, null);
+$result = $obj->getResult();
 ?>
 
 <!DOCTYPE html>
@@ -67,26 +71,27 @@ include 'header.php';
             <form action="<?= $base_url ?>?r=noticeform" method="POST" class="row g-3 mt-4">
                 <div class="col-md-4">
                     <label for="date" class="form-label">Select a date</label><br>
-                    <input type="text" id="date" name="day" class="date-picker " />
+                    <input type="text" id="date" name="day" class="date-picker " required />
                 </div>
                 <div class="col-md-6">
                     <label for="monthyear" class="form-label">Select Month and Year</label> <br>
-                    <input type="text" id="monthyear" name="monthyear" class="monthyear-picker " />
+                    <input type="text" id="monthyear" name="monthyear" class="monthyear-picker " required />
                 </div>
                 <div class="col-12 mt-3">
                     <label for="Notice" class="form-label">Notice Title</label>
                     <input type="text" name="noticetitle" class="form-control" id="Notice"
-                        placeholder="Farewell Program">
+                        placeholder="Farewell Program" required>
                 </div>
                 <div class="col-12 mt-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Enter Notice Here</label>
-                    <textarea class="form-control" name="noticemessage" id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
+                    <textarea class="form-control" name="noticemessage" id="exampleFormControlTextarea1" rows="3"
+                        required></textarea>
                 </div>
                 <div class="col-12 mt-4">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
+
         </div>
 
 
@@ -96,26 +101,44 @@ include 'header.php';
                     Notice/Events
                 </div>
 
-                <table id="NoticeEvent" class=" table table-striped text-dark mt-4">
+                <table id="AllnoticeEvent" class=" table table-striped text-dark mt-4">
                     <tr>
                         <th>Notice Date</th>
                         <th>Notice Title </th>
-                        <th> Action </th>
+                        <th> </th>
                     </tr>
 
+                    <?php
+                    foreach ($result as list("id" => $Id, "day" => $Day, "monthyear" => $MonthYear, "noticetitle" => $NoticeTitle, "noticemessage" => $NoticeMessage)) {
+                        echo '
+                            <tr>
+                                <td> ' . $Day . ' </td>
+                                <td> ' . $NoticeTitle . '</td>
+
+                                <td>
+                                        <form action = "?r=eventnoticeDelete" method="POST" >
+                                        <input type="hidden" name="id" value="' . $Id . '">
+                                        <button type="submit" class="btn btn-danger"> Delete</button>
+                                        </form>
+                                </td>
+                            </tr>               
+                                ';
+                    }
+                    ?>
                 </table>
             </div>
         </div>
 
     </div>
 
-    <script>
+    <!-- For some Reason below Ajax code to display JSON data not working -->
+    <!-- <script>
         $(document).ready(function () {
             $.ajax({
-                url: '<?= $base_url ?>?r=noticeEvent',
+                url: '<?= $base_url ?>?r=noticeEventJson',
                 dataType: 'json',
                 success: function (data) {
-                    var table = $('#NoticeEvent');
+                    var table = $('#AllnoticeEvent');
                     $.each(data, function (index, noticeVar) {
                         table.append(
                             `
@@ -132,7 +155,7 @@ include 'header.php';
                 }
             });
         });
-    </script>
+    </script> -->
 
 
 

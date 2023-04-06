@@ -1,5 +1,9 @@
 <?php
 include 'header.php';
+include 'model/dbmodule.php';
+$obj = new Database();
+$obj->select("teacher_forum", "*", null, null, null, null);
+$teacherRecord = $obj->getResult();
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +33,7 @@ include 'header.php';
         .teacherImage {
             height: 100px;
             width: 100px;
+            border-radius: 1rem;
         }
     </style>
 </head>
@@ -86,12 +91,18 @@ include 'header.php';
 
     <table id="teacherRecordtable" class=" table table-striped text-light mt-4">
         <tr>
+
             <th>Image</th>
             <th> Name </th>
             <th> Category </th>
             <th> Action </th>
         </tr>
+
+
     </table>
+
+
+    <!-- I can show data from json too -->
 
     <script>
 
@@ -109,7 +120,10 @@ include 'header.php';
                                 <td>  ${variable.name}</td>
                                 <td> ${variable.category}</td>
                                 <td>
-                                    <button class="btn btn-danger"> Delete</button>
+                                    <form action="<?= $base_url ?>?r=addTeacherDelete" method="POST">
+                                    <input type="hidden" name="id" value="${variable.id}" >
+                                    <button class="btn btn-danger" type="submit"> Delete </button>
+                                    </form>
                                 </td>
                             </tr>
                             `

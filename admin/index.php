@@ -51,9 +51,13 @@ if (isset($_GET['r'])) {
             $_SESSION['active_url'] = 'admissionJson';
             include 'getjsondata/newadmissiongetData.php';
             break;
-        case 'noticeEvent';
+        case 'noticeEventJson';
             $_SESSION['active_url'] = 'noticeEvent';
             include 'getjsondata/noticeEventgetData.php';
+            break;
+        case 'stdAchievmentJsonData';
+            $_SESSION['active_url'] = 'stdAchievmentJsonData';
+            include 'getjsondata/stdAchievmentJsonData.php';
             break;
         case 'admissionstatus';
             $_SESSION['active_url'] = 'admissionstatus';
@@ -61,7 +65,19 @@ if (isset($_GET['r'])) {
             break;
         case 'deleteaction':
             $_SESSION['active_url'] = 'deleteaction';
-            include 'controller/deleteactionController.php';
+            include 'controller/deleteController/deleteactionController.php';
+            break;
+        case 'eventnoticeDelete':
+            $_SESSION['active_url'] = 'eventnoticeDelete';
+            include 'controller/deleteController/eventnoticeDeleteController.php';
+            break;
+        case 'addTeacherDelete':
+            $_SESSION['active_url'] = 'addTeacherDelete';
+            include 'controller/deleteController/addTeacherDelete.php';
+            break;
+        case 'stdAchievmentDelete':
+            $_SESSION['active_url'] = 'stdAchievmentDelete';
+            include 'controller/deleteController/stdAchievmentDelete.php';
             break;
         case 'events':
             $_SESSION['active_url'] = 'events';
