@@ -12,14 +12,9 @@
 </head>
 
 <body>
-
-
-
     <div class="clzbanner">
-        <img src="images/ack_banner.jpg" alt="">
+        <img src="images/Custom_Banner.jpg" alt="">
     </div>
-
-
     <div class="loginSecction">
         <h2><span class="scfName">Modern English</span> <span class="sclName">Boarding School</span></h2>
         <div class="loginSectionContent mt-5">
@@ -35,16 +30,11 @@
                     <input type="password" name="password" class="form-control" id="exampleFormControlInput2"
                         placeholder="Enter Your Password">
                 </div>
-                <!-- <div class="mb-3">
-                    <label for="exampleFormControlInput2 " class="form-label text-light">Usertype</label>
-                    <input type="text" name="usertype" class="form-control" id="exampleFormControlInput2" value="user">
-                </div> -->
                 <input type="submit" class="btn-solid-reg page-scroll justify-content-center" value="submit" />
-                <a href="" class="lost-solid-reg">Lost Password</a>
+
             </form>
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

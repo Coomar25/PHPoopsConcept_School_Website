@@ -27,8 +27,9 @@
     padding: 0px 30px;
 }
 
-.content .logo {
-    height: 50;
+ .content img{
+    height: 50px;
+    width: 50px;
 }
 
 .mynavbar {
@@ -133,6 +134,12 @@ padding: 30px 0px;
 }
 
 
+
+.footersection .footerimage{
+    border-radius: 3rem;
+}
+
+
 /* @media (max-width: 1230px) {
 .content{
 padding: 0 60px;
@@ -214,31 +221,94 @@ font-size: 27px;
 /****************************/
 /*         Footer           */
 /****************************/
-
-
+.footersection{
+    width:100vw;
+    padding-bottom: 1rem;
+    background-color: #000000;
+}
 
 .footSection {
     color: #f0f9ff;
-    background-color: #282d32;
-    width: 100vw;
+    
     text-decoration: none;
 }
 
-.footsection a {
+
+.footSection a{
     text-decoration: none;
+    color: #54aba1;
 }
 
-.lastfoosec {
-    width: 100vw;
-    height: 6rem;
-    background-color: black;
-    color: #f0f9ff;
+.developedBy{
+    color: beige;
 }
 
-.footersectionicon i {
-    padding: 1rem;
-    font-size: 3rem;
+
+/*  */
+
+
+
+
+@media screen and (max-width:990px) {
+
+    .footSection{
+       display: flex;
+flex-direction: column;  
+        position: relative;
+    }
+    .footSection .footerimage{
+      margin-left: 11rem;
+        
+    }
+    
+    .footSection .usefullLink{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        width: 100vw;
+          
+    }
+    
+    .footSection .usefullLink a{
+        padding: 1rem;
+        text-decoration: none;
+    }
+
+    .footersection .footerimage{
+        align-items: center;
+    }
+
+    .footSection .usefullAddress{
+       
+        display: flex;
+        width: 100vw;
+    }
+
+
+ .usefullAddress h5 {
+        padding: 2rem;
+    }
 }
+
+
+
+
+
+
+@media screen and (max-width:779px){
+    .footSection .footerimage{
+        width: 400px;
+    }
+    
+     .usefullAddress{
+        padding-top: 6rem;
+    }
+}
+
+
+
 
 
 

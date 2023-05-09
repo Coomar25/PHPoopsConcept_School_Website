@@ -63,7 +63,6 @@ include 'header.php';
 
 
 <script>
-
     $(document).ready(function () {
         $.ajax({
             url: '<?= $base_url ?>?r=admissiondJson',

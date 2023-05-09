@@ -19,10 +19,11 @@
 <body>
 
 
-
     <div class="clzbanner">
-        <img src="images/ack_banner.jpg" alt="">
+        <img src="images/Custom_Banner.jpg" alt="">
+
     </div>
+
     <div class="Secction pt-4">
         <h2 class="text-center"><span class="scfName ">Modern English</span> <span class="sclName">Boarding
                 School</span></h2>
@@ -82,13 +83,23 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <!-- <div class="col-md-3">
                             <label for="validationCustom05" class="form-label text-light">Age</label>
-                            <input type="text" name="age" class="form-control" id="validationCustom05" required>
+                            <input type="tel" name="age" class="form-control" id="validationCustom05" required>
                             <div class="invalid-feedback">
                                 Please provide a valid Age.
                             </div>
+                        </div> -->
+                        <div class="col-md-3">
+                            <label for="validationCustom05" class="form-label text-light">Contact Number</label>
+                            <input type="tel" name="contact" class="form-control" id="validationCustom05"
+                                pattern="9[0-9]{9}" title="Please enter a valid 10-digit contact number starting with 9"
+                                required>
+                            <div class="invalid-feedback">
+                                Please provide a valid 10-digit contact number starting with 9.
+                            </div>
                         </div>
+
 
                         <div class="col-md-3">
                             <label for="validationCustom06" class="form-label text-light">Gender</label>

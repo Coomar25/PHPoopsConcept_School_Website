@@ -7,10 +7,10 @@
     .middle-banner {
         height: 30rem;
         width: 100vw;
-        background: url(images/banner.jpg) no-repeat;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(images/banner.jpg) no-repeat;
         background-attachment: fixed;
-
     }
+
 
     .middle-banner .img {
         height: 2rem;
@@ -80,7 +80,7 @@
         <img src='images/services-icon-3.svg'>
         <div class="middle-banner-txt">
             <h1 class="school">MODERN SCHOOL</h1>
-            <h4> THUNDERBOLTS </H4>
+            <h4> TEAMWORKING </H4>
         </div>
 
     </div>

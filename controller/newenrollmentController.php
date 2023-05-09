@@ -10,7 +10,7 @@ if (!empty($_POST)) {
     $mName = $_POST['mname'];
     $fName = $_POST['fname'];
     $Address = $_POST['address'];
-    $Age = $_POST['age'];
+    $Contact = $_POST['contact'];
     $Gender = $_POST['gender'];
     $Csei = $_POST['csei']; // Current school enrolled in 
     $Ccei = isset($_POST['ccei']) ? $_POST['ccei'] : ''; //Current class enrolled in /////// This is ternary operator if not done this this messgage will show :-------> Notice: Undefined index: ccei in D:\xampp\htdocs\modern\controller\newenrollmentController.php on line 17
@@ -18,13 +18,13 @@ if (!empty($_POST)) {
     $Terms = isset($_POST['terms']) ? $_POST['terms'] : '';
 
 
-    if (empty($stdName) || empty($mName) || empty($fName) || empty($Address) || empty($Age) || empty($Gender) || empty($Csei) || empty($Ccei) || empty($Cemebs) || empty($Terms)) {
+    if (empty($stdName) || empty($mName) || empty($fName) || empty($Address) || empty($Contact) || empty($Gender) || empty($Csei) || empty($Ccei) || empty($Cemebs) || empty($Terms)) {
         echo "<script> alert('Please fill the required form!'); </script>";
         include 'view/newadmission.php';
         exit;
     }
-
-    $value = ["stdname" => $stdName, "mname" => $mName, "fname" => $fName, "address" => $Address, "age" => $Age, "gender" => $Gender, "csei" => $Csei, "ccei" => $Ccei, "cemebs" => $Cemebs, "aggrement" => $Terms];
+    ///Here i debug the code where i insert contact in age field but i didn't change the field name in data base
+    $value = ["stdname" => $stdName, "mname" => $mName, "fname" => $fName, "address" => $Address, "age" => $Contact, "gender" => $Gender, "csei" => $Csei, "ccei" => $Ccei, "cemebs" => $Cemebs, "aggrement" => $Terms];
 
     // Insert the values into the database
     if ($obj->insert('new_admission', $value)) {

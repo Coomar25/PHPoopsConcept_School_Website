@@ -48,6 +48,7 @@ $result = $obj->getResult();
         .l-section {
             text-align: center;
             margin: 1rem;
+
         }
 
         .c-section {
@@ -82,11 +83,12 @@ $result = $obj->getResult();
             text-align: left;
         }
 
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:1054px) {
             .news {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 gap: 10px;
+                padding-left: 5rem;
             }
 
             .left {
@@ -113,9 +115,71 @@ $result = $obj->getResult();
 
 
             .notice-section {
-                height: 160px;
-                width: 220px;
+                height: 250px;
+                width: 300px;
             }
+        }
+
+        @media screen and (max-width:768px) {
+            .news {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                padding-left: 5rem;
+            }
+
+            .left {
+                width: 43vw;
+            }
+
+
+            .c-section {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+            }
+
+            .date-section {
+                height: 150px;
+                width: 140px;
+                border: 3px dotted;
+            }
+
+            .date-section h1 {
+                margin: 12px;
+            }
+
+
+            .notice-section {
+                height: 250px;
+                width: 300px;
+            }
+        }
+
+
+        @media screen and (max-width:540px) {
+
+            .news {
+                padding-left: 2rem;
+
+            }
+        }
+
+        @media screen and (max-width:488px) {
+
+            .news {
+                padding-left: 0rem;
+            }
+
+            .c-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 20px 0;
+            }
+
         }
     </style>
 </head>
@@ -130,36 +194,25 @@ $result = $obj->getResult();
         <div class="news">
 
             <?php
-
             foreach ($result as list("id" => $Id, "day" => $Day, "monthyear" => $MonthYear, "noticetitle" => $NoticeTitle, "noticemessage" => $NoticeMessage)) {
-
                 echo '
 
                 <div class="l-section">
-                <div class="c-section">
-                    <div class="date-section">
-                        <h1> ' . $Day . '</h1>
-                        <h2> ' . $MonthYear . '</h2>
+                    <div class="c-section">
+                        <div class="date-section">
+                            <h1> ' . $Day . '</h1>
+                            <h2> ' . $MonthYear . '</h2>
+                        </div>
+                        <div class="notice-section">
+                            <h3>' . $NoticeTitle . '</h3>
+                            <p>' . $NoticeMessage . '</p>
+                        </div>
                     </div>
-                    <div class="notice-section">
-                        <h3>' . $NoticeTitle . '</h3>
-                        <p>' . $NoticeMessage . '</p>
-                    </div>
-                </div>
                 </div>                
                 ';
-
             }
-
-
             ?>
-
-
-
-
         </div>
-
-
     </div>
 
 

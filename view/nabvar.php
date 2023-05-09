@@ -22,8 +22,9 @@
     <nav class="mynavbar">
         <div class="content">
             <div class="logo">
-                <img src="https://th.bing.com/th/id/R.7e8a0015935d244af373ffd25f878b7b?rik=1Ge0H7PVWxdkOw&pid=ImgRaw&r=0"
-                    height="50" />
+                <!-- <img src="https://th.bing.com/th/id/R.7e8a0015935d244af373ffd25f878b7b?rik=1Ge0H7PVWxdkOw&pid=ImgRaw&r=0"
+                    height="50" /> -->
+                <img src="./images/schoolLogo.png" height="65" />
             </div>
 
             <ul class="menu-list">

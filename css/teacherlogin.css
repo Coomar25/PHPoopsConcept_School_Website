@@ -1,10 +1,12 @@
 
         * {
-            background-color: black;
+            background-color: #000000;
         }
 
         .clzbanner img {
             width: 100vw;
+            /* height: 400px;
+            padding-left: 10rem; */
         }
 
         .loginSecction {
@@ -62,10 +64,13 @@
             text-decoration: none;
         }
 
+      
+
         @media (max-width:840px) {
 
             .clzbanner img {
                 width: 100vw;
+                /* padding-left: 1rem; */
 
             }
 

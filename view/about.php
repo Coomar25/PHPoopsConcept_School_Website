@@ -44,20 +44,7 @@ $teacherdata = $obj->getResult();
                     </div> <!-- end of image-wrapper -->
                     <p class="p-large"><strong>' . $Name . '</strong></p>
                     <p class="job-title"> ' . $Post . '</p>
-                    <span class="social-icons">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x facebook"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x twitter"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </span> <!-- end of social-icons -->
+                   
                 </div> <!-- end of team-member -->
                 <!-- end of team member -->
             </div>    
