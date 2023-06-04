@@ -69,7 +69,6 @@ $validator->renderForm();
 
 if (!empty($_POST)) {
     $validator->submitForm();
-
     // Get form data 
     $tname = filter_input(INPUT_POST, "tname", FILTER_SANITIZE_STRING);
     $timage = $image = $_FILES['timage'];

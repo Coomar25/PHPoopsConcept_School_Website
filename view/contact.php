@@ -39,8 +39,6 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-
-
                     <form action="<?= $base_url ?>?r=contactmessage" method="POST" id="contactForm"
                         data-toggle="validator" data-focus="false">
                         <div class="form-group">

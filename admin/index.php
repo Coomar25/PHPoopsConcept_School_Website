@@ -11,7 +11,6 @@ include 'helper/RouteHelper.php';
 if (isset($_GET['r'])) {
     $controller = $_GET['r'];
     switch ($controller) {
-
         case 'achievment':
             $_SESSION['active_url'] = 'achievment';
             include 'controller/achievmentController.php';

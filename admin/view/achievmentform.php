@@ -51,15 +51,11 @@ include 'header.php';
 
     <table id="stdAchievment" class=" table table-striped text-light mt-4">
         <tr>
-
             <th>Name</th>
             <th> GPA </th>
             <th> Achievment </th>
             <th> Action </th>
-
         </tr>
-
-
 
     </table>
 

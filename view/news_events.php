@@ -196,7 +196,6 @@ $result = $obj->getResult();
             <?php
             foreach ($result as list("id" => $Id, "day" => $Day, "monthyear" => $MonthYear, "noticetitle" => $NoticeTitle, "noticemessage" => $NoticeMessage)) {
                 echo '
-
                 <div class="l-section">
                     <div class="c-section">
                         <div class="date-section">

@@ -31,7 +31,6 @@ $teacherdata = $obj->getResult();
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
-
                 <?php
 
                 foreach ($teacherdata as list("name" => $Name, "image" => $Image, "post" => $Post, "quote" => $Quote, "category" => $Category)) {

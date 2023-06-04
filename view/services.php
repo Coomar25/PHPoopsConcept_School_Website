@@ -77,20 +77,6 @@
                     <!-- end of card -->
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
